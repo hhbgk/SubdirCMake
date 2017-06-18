@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Example of a call to a native method
         TextView tv = (TextView) findViewById(R.id.sample_text);
-        tv.setText(stringFromJNI(1,1));
+        tv.setText(stringFromJNI(3,1) + ", "+ subtract(7, 1));
     }
 
     /**
@@ -26,4 +26,6 @@ public class MainActivity extends AppCompatActivity {
      * which is packaged with this application.
      */
     public native String stringFromJNI(int a, int b);
+
+    public native String subtract(int a, int b);
 }
